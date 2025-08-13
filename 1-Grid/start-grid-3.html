@@ -1,115 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reordering & offset</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reordering & offset</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./../style.css" />
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="./../style.css">
+    <style>
+      .container > .row > div {
+        font-size: 50px;
+        text-align: center;
+      }
 
-  <style>
-    .container>.row>div {
-      font-size: 50px;
-      text-align: center;
-    }
+      .row {
+        border: 3px solid red !important;
+      }
+    </style>
+  </head>
 
-    .row {
-      border: 3px solid red !important;
-    }
-  </style>
+  <body>
+    <!-- Column Break -->
+    <div class="container">
+      <h1 class="display-1">Column Break</h1>
+      <br />
+      <div class="row">
+        <div class="col-6 col-sm-3">1</div>
+        <div class="col-6 col-sm-3">2</div>
 
-</head>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
 
-<body>
-  <!-- Column Break -->
-  <div class="container">
-    <h1 class="display-1">Column Break</h1>
-    <br>
-    <div class="row">
-      <div class="col-6 col-sm-3">1</div>
-      <div class="col-6 col-sm-3">2</div>
-  
-      <!-- Force next columns to break to new line -->
-  
-      <div class="col-6 col-sm-3">3</div>
-      <div class="col-6 col-sm-3">4</div>
+        <div class="col-6 col-sm-3">3</div>
+        <div class="col-6 col-sm-3">4</div>
+      </div>
+
+      <br />
+
+      <div class="row">
+        <div class="col-6 col-sm-4">1</div>
+        <div class="col-6 col-sm-4">2</div>
+
+        <!-- Force next columns to break to new line at md breakpoint and up -->
+        <div class="w-100 d-md-block d-none"></div>
+
+        <div class="col-6 col-sm-4">3</div>
+        <div class="col-6 col-sm-4">4</div>
+      </div>
     </div>
 
-    <br>
+    <br />
+    <br />
 
-    <div class="row">
-      <div class="col-6 col-sm-4">1</div>
-      <div class="col-6 col-sm-4">2</div>
-  
-      <!-- Force next columns to break to new line at md breakpoint and up -->
-  
-      <div class="col-6 col-sm-4">3</div>
-      <div class="col-6 col-sm-4">4</div>
+    <!-- Ordering -->
+    <div class="container">
+      <h1 class="display-1">ordering</h1>
+      <br />
+      <div class="row">
+        <!-- 항상 order가 먹힘 -->
+        <div class="col order-4">a1</div>
+        <div class="col">a2</div>
+        <div class="col order-1">a3</div>
+        <div class="col order-2">a4</div>
+      </div>
+      <br />
+      <div class="row">
+        <!-- md 사이즈 이상일 때만 order가 먹힘 -->
+        <div class="col order-md-4">b1</div>
+        <div class="col order-md-3">b2</div>
+        <div class="col order-md-1 order-sm-4">b3</div>
+        <div class="col order-md-2">b4</div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col">c1</div>
+        <div class="col order-last">c2</div>
+        <div class="col">c3</div>
+        <div class="col order-first">c4</div>
+      </div>
     </div>
-  </div>
 
-  <br>
-  <br>
+    <br />
+    <br />
 
-  <!-- Ordering -->
-  <div class="container">
-    <h1 class="display-1">ordering</h1>
-    <br>
-    <div class="row">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
+    <!-- Offset -->
+    <div class="container">
+      <h1 class="display-1">Offset</h1>
+      <br />
+      <div class="row">
+        <div class="col-md-4">1</div>
+        <div class="col-md-4 offset-md-4">2</div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-sm-4">1</div>
+        <div class="col-sm-4 offset-md-4">2</div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-lg-3 offset-lg-2 offset-md-3">1</div>
+        <div class="col-lg-3 offset-lg-4 offset-md-3">2</div>
+      </div>
     </div>
-    <br>
-    <div class="row">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col">1</div>
-      <div class="col">2</div>
-      <div class="col">3</div>
-      <div class="col">4</div>
-    </div>
-  </div>
-  
-  <br>
-  <br>
 
-  <!-- Offset -->
-  <div class="container">
-    <h1 class="display-1">Offset</h1>
-    <br>
-    <div class="row">
-      <div class="col-md-4">1</div>
-      <div class="col-md-4">2</div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-sm-4">1</div>
-      <div class="col-sm-4">2</div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-lg-3">1</div>
-      <div class="col-lg-3">2</div>
-    </div>
-  </div>
-  
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-    crossorigin="anonymous"></script>
-</body>
-
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

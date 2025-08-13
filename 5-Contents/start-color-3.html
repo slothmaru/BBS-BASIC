@@ -6,7 +6,12 @@
     <title>Colors</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="./../style.css" />
@@ -31,19 +36,21 @@
       <div>
         <!-- Text color -->
         <h2>Text Color</h2>
-        <p>text-primary</p>
-        <p>text-secondary</p>
-        <p>text-success</p>
-        <p>text-danger</p>
-        <p>text-warning</p>
-        <p>text-info</p>
-        <p>text-light</p>
-        <p>text-dark</p>
-        <p>text-body</p>
-        <p>text-muted</p>
-        <p>text-white</p>
-        <p>text-black-50</p>
-        <p>text-white-50</p>
+        <p class="text-primary">text-primary</p>
+        <p class="text-secondary">text-secondary</p>
+        <p class="text-success">text-success</p>
+        <p class="text-danger">text-danger</p>
+        <p class="text-warning bg-dark">text-warning</p>
+        <p class="text-info bg-dark">text-info</p>
+        <p class="text-light bg-dark">text-light</p>
+        <p class="text-dark">text-dark</p>
+        <!-- dark랑 동일 -->
+        <p class="text-body">text-body</p>
+        <!-- secondary랑 동일 -->
+        <p class="text-muted">text-muted</p>
+        <p class="text-white bg-dark">text-white</p>
+        <p class="text-black-50">text-black-50</p>
+        <p class="text-white-50 bg-dark">text-white-50</p>
       </div>
 
       <br /><br />
@@ -51,16 +58,16 @@
       <div>
         <!-- Background-color -->
         <h2>Background Color</h2>
-        <div class="p-3 mb-2">bg-primary</div>
-        <div class="p-3 mb-2">bg-secondary</div>
-        <div class="p-3 mb-2">bg-success</div>
-        <div class="p-3 mb-2">bg-danger</div>
-        <div class="p-3 mb-2">bg-warning</div>
-        <div class="p-3 mb-2">bg-info</div>
-        <div class="p-3 mb-2">bg-light</div>
-        <div class="p-3 mb-2">bg-dark</div>
-        <div class="p-3 mb-2">bg-white</div>
-        <div class="p-3 mb-2">bg-transparent</div>
+        <div class="p-3 mb-2 bg-primary text-white">bg-primary</div>
+        <div class="p-3 mb-2 bg-secondary text-white">bg-secondary</div>
+        <div class="p-3 mb-2 bg-success text-white">bg-success</div>
+        <div class="p-3 mb-2 bg-danger text-white">bg-danger</div>
+        <div class="p-3 mb-2 bg-warning text-dark">bg-warning</div>
+        <div class="p-3 mb-2 bg-info text-dark">bg-info</div>
+        <div class="p-3 mb-2 bg-light text-dark">bg-light</div>
+        <div class="p-3 mb-2 bg-dark text-white">bg-dark</div>
+        <div class="p-3 mb-2 bg-white text-dark">bg-white</div>
+        <div class="p-3 mb-2 bg-transparent text-dark">bg-transparent</div>
       </div>
 
       <br /><br />
@@ -68,18 +75,22 @@
       <div>
         <!-- Colored Link -->
         <h2>Colored Link</h2>
-        <a href="#">Primary link</a>
-        <a href="#">Secondary link</a>
-        <a href="#">Success link</a>
-        <a href="#">Danger link</a>
-        <a href="#">Warning link</a>
-        <a href="#">Info link</a>
-        <a href="#">Light link</a>
-        <a href="#">Dark link</a>
+        <a href="#" class="link-primary">Primary link</a>
+        <a href="#" class="link-secondary">Secondary link</a>
+        <a href="#" class="link-success">Success link</a>
+        <a href="#" class="link-danger">Danger link</a>
+        <a href="#" class="link-warning">Warning link</a>
+        <a href="#" class="link-info">Info link</a>
+        <a href="#" class="link-light bg-dark">Light link</a>
+        <a href="#" class="link-dark">Dark link</a>
       </div>
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
