@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -29,8 +34,110 @@
     <title>My First Web</title>
   </head>
   <body>
-    <h1 class="display-1"><i class="fas fa-home">hello world</i></h1>
-    <script src="js/bootstrap.min.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 shadow-lg sticky-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand aligh-middle">
+          <h3 class="m-0">
+            <img src="assets/images/bootstrap-logo.png" alt="Logo" height="36px" />
+            My BSS Web
+          </h3>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toogle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="#top" class="nav-link"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="#intro" class="nav-link"> Intro </a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link"> Services </a>
+            </li>
+            <li class="nav-item">
+              <a href="#slogan" class="nav-link"> Slogan </a>
+            </li>
+            <li class="nav-item">
+              <a href="#gallery" class="nav-link"> Gallery </a>
+            </li>
+            <li class="nav-item">
+              <a href="#cta" class="nav-link"> Contact </a>
+            </li>
+            <li class="nav-item">
+              <a href="#find-us" class="nav-link"> Find us </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="top">
+      <div class="section-content overlay d-flex justify-content-center align-items-center">
+        <div class="container-xxl">
+          <div class="row align-items-center">
+            <div class="col-md-9 welcome">
+              <h1 class="welcome-title fw-light">
+                Welcome to <span class="text-warning fw-bold">my first website</span>Lorem ipsum
+                dolor sit, amet consectetur adipisicing elit. Commodi, placeat!
+              </h1>
+              <div class="divider"></div>
+              <div class="row welcome-desc"></div>
+              <p class="col-sm-10 col-md-12 lead">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus facere
+                culpa sed perferendis harum quos voluptate distinctio numquam veniam magni?
+              </p>
+              <p class="col-sm-2 col-md-12">
+                <a href="#" class="btn btn-primary">Read more</a>
+              </p>
+            </div>
+            <div class="col-md-3 d-none d-md-block letsgo">
+              <div class="card card-body letsgo-card">
+                <div class="my-3">
+                  <h4 class="letsgo-title card-title text-dark mb-3">Easy contact!</h4>
+                  <p class="card-text text-secondary">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, ducimus.
+                  </p>
+                </div>
+                <div class="letsgo-card-form">
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" placeholder="Your name" />
+                    </div>
+                    <div class="mb-3">
+                      <input type="tel" class="form-control" placeholder="Your phone" />
+                    </div>
+                    <div class="form-check bm-3">
+                      <input type="checkbox" class="form-check-input" id="flextCheckDefault" />
+                      <label for="flextCheckDefault" class="form-checklabel text-secondary">
+                        I agree to provide privacy.
+                      </label>
+                    </div>
+                    <p class="mb-3">
+                      <button class="btn btn-primary w-100" type="button">Submit</button>
+                    </p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
       integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
