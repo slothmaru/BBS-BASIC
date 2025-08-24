@@ -1,14 +1,18 @@
-/* Global */
+/* Global: 전역으로 사용할 클래스 */
 .section-content {
+  /* 상하, 좌우 */
   padding: 4rem 0;
 }
 
 /* Top Section */
 #top {
-  background-image: url("../images/bg-top.jpg");
+  background-image: url('../images/bg-top.jpg');
   background-position: center;
+  /* 반복 여부 */
   background-repeat: no-repeat;
+  /* 배경의 크기 */
   background-size: cover;
+  /* top의 높이가 화면의 80%를 차지하게 함 */
   height: 80vh;
   position: relative;
 }
@@ -34,9 +38,75 @@
   color: #fff;
 }
 
+/* 767px 이하에서 작동 */
 @media screen and (max-width: 767px) {
   #top .welcome {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+#intro .intro-first-card {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 12rem;
+}
+
+#intro .col-6:nth-of-type(1) .intro-first-card {
+  background-image: url('../images/bg1.jpg');
+}
+
+#intro .col-6:nth-of-type(2) .intro-first-card {
+  background-image: url('../images/bg2.jpg');
+}
+
+#intro .col-6:nth-of-type(3) .intro-first-card {
+  background-image: url('../images/bg3.jpg');
+}
+
+#intro .col-6:nth-of-type(4) .intro-first-card {
+  background-image: url('../images/bg4.jpg');
+}
+
+#intro .intro-first-card .overlay {
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* 부트스트랩 유틸로 색을 잡고 있는 경우 !important로 덮어써야 적용됨 */
+#intro .intro-first-card .overlay a {
+  transition: hover 0.4s ease !important;
+}
+
+/* 부트스트랩 유틸로 색을 잡고 있는 경우 !important로 덮어써야 적용됨 */
+#intro .intro-first-card .overlay a:hover {
+  color: #fafa6f !important;
+}
+
+#services {
+  background-color: rgba(96, 125, 139, 0.1);
+}
+
+#services .divider {
+  width: 10%;
+  margin: 2rem auto;
+  border-top: 0.5rem solid rgb(255, 112, 3);
+}
+
+#services .services-col .card {
+  transition: 0.4s ease;
+  /* margin: 0 5px; */
+}
+
+#services .services-col .card:hover {
+  transform: translateY(-0.8rem);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+
+#services .services-col img {
+  height: 13rem;
+  object-fit: cover;
+  object-position: center;
 }

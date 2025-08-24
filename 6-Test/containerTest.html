@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container Test</title>
+    <link rel="stylesheet" href="../Project 1/assets/css/bootstrap.min.css" />
+    <style>
+      div {
+        margin: 10px;
+        padding: 5px;
+      }
+      .container-xxl {
+        border: 3px solid #ff0000;
+      }
+
+      .container-xl {
+        border: 3px solid #ff9f00;
+      }
+
+      .container-lg {
+        border: 3px solid #f6ff00;
+      }
+
+      .container-md {
+        border: 3px solid #0dff00;
+      }
+
+      .container-sm {
+        border: 3px solid #0011ff;
+      }
+
+      .container {
+        border: 3px solid #a600ff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+    Break point
+    xs: < 576px,
+    sm: >= 576px,
+    md: >= 768px,
+    lg: >= 992px,
+    xl: >= 1200px,
+    xxl: >= 1400px 
+  -->
+    <div>BreakPoint가 성립되지 않으면 container-fluid로 바뀜</div>
+    <div>한 화면으로 PC/태블릿/모바일 모두 커버 가능함 container를 선언하면 BP마다 바뀜</div>
+    <div>내부에 grid는 여러 BP를 중복으로 선언 가능하므로 세 화면에 맞추면 됨</div>
+
+    <div id="xxl" class="container-xxl">xxl: 1400px 이상 / <span></span></div>
+    <div id="xl" class="container-xl">xl : 1200px 이상 / <span></span></div>
+    <div id="lg" class="container-lg">lg : 992px 이상 / <span></span></div>
+    <div id="md" class="container-md">md : 768px 이상 / <span></span></div>
+    <div id="sm" class="container-sm">sm : 576px 이상 / <span></span></div>
+    <div id="xs" class="container">xs : 576px 미만 / <span></span></div>
+    <script src="../Project 1/assets/js/bootstrap.min.js"></script>
+    <script>
+      // 처음 로드될 때 실행
+      window.addEventListener('load', updateContainerWidths);
+
+      // 창 크기 바뀔 때마다 실행
+      window.addEventListener('resize', updateContainerWidths);
+
+      function updateContainerWidths() {
+        let containers = document.querySelectorAll('[class^="container"]');
+
+        containers.forEach(function (elem, i) {
+          let span = elem.querySelector('span');
+          if (span) {
+            span.innerText = elem.clientWidth;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
